@@ -1,0 +1,46 @@
+﻿<Window x:Class="Ships.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ships"
+        mc:Ignorable="d"
+        Title="Ships - © Maciej Znamirowski, maciek@znamirowski.pl" Height="709.5" Width="1200" Top="50" Left="50">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas x:Name="userBoardCanvas" Background="White" Grid.Row="1" Grid.Column="1" MouseMove="userBoardCanvas_MouseMove" MouseLeftButtonDown="userBoardCanvas_MouseLeftButtonDown" MouseRightButtonDown="userBoardCanvas_MouseRightButtonDown" Grid.RowSpan="2"/>
+        <Canvas x:Name="computerBoardCanvas" Background="White" Grid.Column="3" Grid.Row="1" Grid.RowSpan="2" MouseDown="computerBoardCanvas_MouseDown" MouseMove="computerBoardCanvas_MouseMove"/>
+        <Canvas x:Name="userShip4" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="4" Grid.RowSpan="4" Width="35" MouseDown="userShip4_Click" Background="SkyBlue"/>
+        <Canvas x:Name="userShip3_1" Grid.Column="1" HorizontalAlignment="Left" Margin="40,0,0,0" Grid.Row="5" Grid.RowSpan="3" Width="35" MouseDown="userShip3_Click" Background="SkyBlue"/>
+        <Canvas x:Name="userShip3_2" Grid.Column="1" HorizontalAlignment="Left" Margin="80,0,0,0" Grid.Row="5" Grid.RowSpan="3" Width="35" MouseDown="userShip3_Click" Background="SkyBlue"/>
+        <Canvas x:Name="userShip2_1" Grid.Column="1" HorizontalAlignment="Left" Margin="120,0,0,0" Grid.Row="6" Grid.RowSpan="2" Width="35" MouseDown="userShip2_Click" Background="SkyBlue"/>
+        <Canvas x:Name="userShip2_2" Grid.Column="1" HorizontalAlignment="Left" Margin="160,0,0,0" Grid.Row="6" Grid.RowSpan="2" Width="35" MouseDown="userShip2_Click" Background="SkyBlue"/>
+        <Canvas x:Name="userShip2_3" Grid.Column="1" HorizontalAlignment="Left" Margin="200,0,0,0" Grid.Row="6" Grid.RowSpan="2" Width="35" MouseDown="userShip2_Click" Background="SkyBlue"/>
+        <Canvas x:Name="userShip1_1" Grid.Column="1" HorizontalAlignment="Left" Margin="240,0,0,0" Grid.Row="7" Width="35" MouseDown="userShip1_Click" Background="SkyBlue"/>
+        <Canvas x:Name="userShip1_2" Grid.Column="1" HorizontalAlignment="Left" Margin="280,0,0,0" Grid.Row="7" Width="35" MouseDown="userShip1_Click" Background="SkyBlue"/>
+        <Canvas x:Name="userShip1_3" Grid.Column="1" HorizontalAlignment="Left" Margin="320,0,0,0" Grid.Row="7" Width="35" MouseDown="userShip1_Click" Background="SkyBlue"/>
+        <Canvas x:Name="userShip1_4" Grid.Column="1" HorizontalAlignment="Left" Margin="360,0,0,0" Grid.Row="7" Width="35" MouseDown="userShip1_Click" Background="SkyBlue"/>
+        <Label x:Name="lblUserBoard" Content="Plansza Gracza" Grid.Column="1" HorizontalAlignment="Center" Margin="230,16" VerticalAlignment="Center" FontSize="20"/>
+        <Label x:Name="lblComputerBoard" Content="Plansza Komputera" Grid.Column="3" Margin="211,16" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        <Label x:Name="lblInfo" Content="Info" Grid.Column="2" HorizontalAlignment="Center" Margin="0,0,0,5" Grid.Row="1" VerticalAlignment="Bottom"/>
+        <Label x:Name="lblTurnArrow" Content="Label" Grid.Column="2" HorizontalAlignment="Center" Margin="0,5,0,0" Grid.Row="2" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <TextBlock x:Name="txtInstructions" Grid.Column="3" Margin="0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Center" Grid.RowSpan="4" HorizontalAlignment="Center"><Run FontSize="14" Text="Instrukcja:" TextDecorations="Underline"/><LineBreak/><Run TextDecorations="Underline"/><LineBreak/><Run FontWeight="Bold" Text="1. Ustawienie statków:"/><LineBreak/><Run Text="- LPM - wybranie / postawienie statku"/><LineBreak/><Run Text="- PPM - obrócenie statku"/><LineBreak/><Run/><LineBreak/><Run FontWeight="Bold" Text="2. Rozgrywka:"/><LineBreak/><Run Text="- LPM - strzał"/></TextBlock>
+    </Grid>
+</Window>
